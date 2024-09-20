@@ -56,8 +56,8 @@ virtusl_host=$(cat << EOF
      ErrorLog $dirname/error.log
      CustomLog $dirname/access.log combined
     SSLEngine on
-    SSLCertificateFile      ${ssl_dir}/certs/localhost.crt
-    SSLCertificateKeyFile   ${ssl_dir}/private/localhost.key
+    SSLCertificateFile      ${ssl_dir}/certs/localhost.pem
+    SSLCertificateKeyFile   ${ssl_dir}/private/localhost.pem
 </VirtualHost>
 
 EOF

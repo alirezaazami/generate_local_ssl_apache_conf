@@ -12,7 +12,9 @@ sudo apt install php8.2 php8.2-xml php8.2-mysql php8.2-fpm php8.2-zip php8.2-soa
 
 sudo apt install apache2
 sudo apt install -y libapache2-mod-fcgid libapache2-mod-php7.2 libapache2-mod-php7.4 libapache2-mod-php8.1 libapache2-mod-php8.2
-sudo a2enmod actions fcgid alias proxy_fcgi
+
+sudo a2enmod proxy_fcgi setenvif actions fcgid alias
+sudo a2enconf php7.4-fpm
 sudo a2enmod php7.4
 sudo a2enmod actions fcgid alias proxy_fcgi
 systemctl start apache2

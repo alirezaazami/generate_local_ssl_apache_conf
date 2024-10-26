@@ -10,7 +10,7 @@ php=${1}
 [ ! -f "/usr/bin/${php}" ] && echo "installing ${php}"
 
 if [ ! -f "/usr/bin/${php}" ]; then
-    sudo apt install ${php} ${php}-xml ${php}-mysql ${php}-fpm ${php}-zip ${php}-soap ${php}-mongodb ${php}-mbstring ${php}-intl ${php}-gd ${php}-curl ${php}-bz2 ${php}-xdebug ${php}-gmp ${php}-bcmath libapache2-mod-${php} 
+    sudo apt install ${php} ${php}-xml ${php}-mysql ${php}-fpm ${php}-zip ${php}-soap ${php}-mongodb ${php}-mbstring ${php}-intl ${php}-gd ${php}-curl ${php}-bz2 ${php}-xdebug ${php}-gmp ${php}-bcmath ${php}-redis libapache2-mod-${php} ${php}-simplexml
 fi
 
 sudo a2enmod proxy_fcgi setenvif actions fcgid alias
